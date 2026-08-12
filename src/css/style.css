@@ -388,3 +388,132 @@ footer p:last-child {
         gap: 10px;
     }
 }
+
+/* ================================
+   PANEL ACADÉMICO
+================================ */
+
+.panel-academico {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 22px;
+}
+
+.progreso-card,
+.tareas-card {
+    background: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.progreso-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progreso-arriba p {
+    color: #7b8498;
+    font-size: 14px;
+}
+
+.progreso-arriba h3 {
+    font-size: 45px;
+    margin-top: 5px;
+}
+
+.progreso-icono {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef2ff;
+    border-radius: 14px;
+    font-size: 25px;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+    margin: 25px 0 12px;
+    background: #e8ebf2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    width: 92%;
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 20px;
+}
+
+.progreso-card > span {
+    color: #16a34a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* TAREAS */
+
+.tareas-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tareas-titulo p {
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tareas-titulo h3 {
+    font-size: 24px;
+}
+
+.contador {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.tarea {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #edf0f5;
+}
+
+.tarea > span {
+    font-size: 22px;
+}
+
+.tarea strong {
+    display: block;
+    font-size: 14px;
+}
+
+.tarea small {
+    color: #7b8498;
+}
+
+@media (max-width: 800px) {
+
+    .panel-academico {
+        grid-template-columns: 1fr;
+    }
+
+}
