@@ -16,14 +16,16 @@
             🏫 INTRANET
         </div>
 
-<button id="modoBtn" class="modo-btn">🌙</button>
-
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#materias">Materias</a>
             <a href="#horario">Horario</a>
+            <a href="#rendimiento">Rendimiento</a>
+            <a href="#tareas">Tareas</a>
             <a href="#avisos">Avisos</a>
         </nav>
+
+        <button id="modoBtn" class="modo-btn" aria-label="Cambiar modo de color">🌙</button>
     </header>
 
     <main>
@@ -63,6 +65,44 @@
             </div>
         </section>
 
+        <section class="estadisticas seccion" aria-label="Estadísticas rápidas">
+            <article class="estadistica-card estadistica-destacada">
+                <div class="estadistica-icono">📈</div>
+                <div>
+                    <p>Promedio general</p>
+                    <strong>92%</strong>
+                    <small>+4% este período</small>
+                </div>
+            </article>
+
+            <article class="estadistica-card">
+                <div class="estadistica-icono">📚</div>
+                <div>
+                    <p>Materias activas</p>
+                    <strong>3</strong>
+                    <small>En progreso</small>
+                </div>
+            </article>
+
+            <article class="estadistica-card">
+                <div class="estadistica-icono">✓</div>
+                <div>
+                    <p>Tareas pendientes</p>
+                    <strong>3</strong>
+                    <small>Por completar</small>
+                </div>
+            </article>
+
+            <article class="estadistica-card">
+                <div class="estadistica-icono">◎</div>
+                <div>
+                    <p>Asistencia</p>
+                    <strong>98%</strong>
+                    <small>Excelente registro</small>
+                </div>
+            </article>
+        </section>
+
 
         <section id="materias" class="seccion">
 
@@ -98,7 +138,7 @@
 
         </section>
 
-<section class="seccion">
+<section id="rendimiento" class="seccion">
 
     <div class="titulo-seccion">
         <p>RENDIMIENTO ACADÉMICO</p>
@@ -127,7 +167,7 @@
         </div>
 
 
-        <div class="tareas-card">
+        <div id="tareas" class="tareas-card">
 
             <div class="tareas-titulo">
                 <div>
