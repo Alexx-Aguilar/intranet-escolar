@@ -4,13 +4,19 @@
 // ================================
 
 // Botón "Explorar portal"
-const botonExplorar = document.querySelector("button");
+const botonExplorar = document.querySelector(".bienvenida button");
 
-botonExplorar.addEventListener("click", () => {
-    document.querySelector("#materias").scrollIntoView({
-        behavior: "smooth"
+if (botonExplorar) {
+    botonExplorar.addEventListener("click", () => {
+        const seccionMaterias = document.querySelector("#materias");
+
+        if (seccionMaterias) {
+            seccionMaterias.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
-});
+}
 
 
 // ================================
@@ -44,14 +50,50 @@ console.log("📚 Portal estudiantil listo para usar");
 
 const modoBtn = document.getElementById("modoBtn");
 
-modoBtn.addEventListener("click", () => {
+if (modoBtn) {
+    modoBtn.addEventListener("click", () => {
 
-    document.body.classList.toggle("modo-oscuro");
+        document.body.classList.toggle("modo-oscuro");
 
-    if (document.body.classList.contains("modo-oscuro")) {
-        modoBtn.textContent = "☀️";
-    } else {
-        modoBtn.textContent = "🌙";
-    }
+        if (document.body.classList.contains("modo-oscuro")) {
+            modoBtn.textContent = "☀️";
+        } else {
+            modoBtn.textContent = "🌙";
+        }
 
-});
+    });
+}
+
+// ================================
+// INICIO DE SESIÓN
+// ================================
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const usuario = document.getElementById("usuario").value.trim();
+        const password = document.getElementById("password").value;
+        const mensaje = document.getElementById("mensajeLogin");
+
+        if (usuario === "estudiante" && password === "1234") {
+
+            mensaje.textContent = "✅ Inicio de sesión correcto. Redirigiendo...";
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 800);
+
+        } else {
+
+            mensaje.textContent = "❌ Usuario o contraseña incorrectos";
+
+        }
+
+    });
+
+}
