@@ -872,11 +872,34 @@ body.modo-oscuro .campo input {
 }
 
 .login-logo {
+    position: relative;
     margin-bottom: 18px;
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
     border: 4px solid #eef2ff;
     border-radius: 22px;
     box-shadow: 0 10px 24px rgba(79, 70, 229, 0.3);
+}
+
+.login-logo-iniciales {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.login-logo-destello {
+    position: absolute;
+    top: -7px;
+    right: -6px;
+    display: grid;
+    place-items: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #fef08a;
+    color: #6d28d9;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(49, 46, 129, 0.28);
 }
 
 .login-etiqueta {
