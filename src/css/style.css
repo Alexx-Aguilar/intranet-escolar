@@ -1,0 +1,390 @@
+/* ================================
+   INTRANET ESCOLAR
+   Diseño principal
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.encabezado {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9f2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #536078;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4f46e5;
+}
+
+
+/* ================================
+   BIENVENIDA
+================================ */
+
+.bienvenida {
+    min-height: 500px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+}
+
+.bienvenida > div {
+    max-width: 700px;
+}
+
+.etiqueta {
+    color: #4f46e5;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.bienvenida h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.bienvenida h1 span {
+    color: #4f46e5;
+}
+
+.bienvenida p:not(.etiqueta) {
+    color: #68748a;
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #3730a3;
+}
+
+
+/* ================================
+   PERFIL
+================================ */
+
+.perfil {
+    width: 86%;
+    margin: -45px auto 70px;
+    padding: 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(30, 41, 59, 0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.perfil-info p {
+    color: #7b8498;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.perfil-info h2 {
+    margin: 2px 0;
+}
+
+.perfil-info span {
+    color: #7b8498;
+}
+
+.estado {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.punto {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+
+/* ================================
+   SECCIONES
+================================ */
+
+.seccion {
+    width: 86%;
+    margin: 0 auto 80px;
+}
+
+.titulo-seccion {
+    margin-bottom: 30px;
+}
+
+.titulo-seccion p {
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    font-size: 35px;
+}
+
+
+/* ================================
+   TARJETAS
+================================ */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    padding: 30px;
+    background: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(30, 41, 59, 0.1);
+}
+
+.icono {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #707b90;
+    margin-bottom: 20px;
+}
+
+.tarjeta span {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   HORARIO
+================================ */
+
+.horario {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.dia {
+    background: white;
+    border: 1px solid #e5e9f2;
+    padding: 25px 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.dia strong {
+    display: block;
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+.dia span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.dia small {
+    color: #7b8498;
+}
+
+
+/* ================================
+   AVISOS
+================================ */
+
+.aviso {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    border: 1px solid #e5e9f2;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.aviso-icono {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff7ed;
+    border-radius: 14px;
+    font-size: 25px;
+}
+
+.aviso h3 {
+    margin-bottom: 5px;
+}
+
+.aviso p {
+    color: #707b90;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 35px 7%;
+    background: #172033;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p:last-child {
+    color: #aab3c5;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bienvenida {
+        padding: 70px 7%;
+    }
+
+    .perfil {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .horario {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
