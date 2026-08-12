@@ -517,3 +517,61 @@ footer p:last-child {
     }
 
 }
+
+/* ================================
+   MODO OSCURO
+================================ */
+
+.modo-btn {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #172033;
+    font-size: 20px;
+}
+
+.modo-btn:hover {
+    transform: rotate(15deg);
+}
+
+
+/* Cuando el modo oscuro está activo */
+
+body.modo-oscuro {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+body.modo-oscuro .encabezado,
+body.modo-oscuro .perfil,
+body.modo-oscuro .tarjeta,
+body.modo-oscuro .dia,
+body.modo-oscuro .aviso,
+body.modo-oscuro .progreso-card,
+body.modo-oscuro .tareas-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.modo-oscuro nav a {
+    color: #cbd5e1;
+}
+
+body.modo-oscuro .bienvenida {
+    background: linear-gradient(135deg, #172554, #0f172a);
+}
+
+body.modo-oscuro .bienvenida p:not(.etiqueta),
+body.modo-oscuro .tarjeta p,
+body.modo-oscuro .aviso p,
+body.modo-oscuro .perfil-info span,
+body.modo-oscuro .dia small {
+    color: #cbd5e1;
+}
+
+body.modo-oscuro .modo-btn {
+    background: #334155;
+    color: white;
+}

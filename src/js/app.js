@@ -37,3 +37,21 @@ enlaces.forEach((enlace) => {
 
 console.log("🏫 Intranet Escolar cargada correctamente");
 console.log("📚 Portal estudiantil listo para usar");
+
+// ================================
+// MODO OSCURO
+// ================================
+
+const modoBtn = document.getElementById("modoBtn");
+
+modoBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("modo-oscuro");
+
+    if (document.body.classList.contains("modo-oscuro")) {
+        modoBtn.textContent = "☀️";
+    } else {
+        modoBtn.textContent = "🌙";
+    }
+
+});
