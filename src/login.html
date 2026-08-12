@@ -12,6 +12,9 @@
 
 <body class="login-body">
 
+    <div class="login-orbe login-orbe-uno" aria-hidden="true"></div>
+    <div class="login-orbe login-orbe-dos" aria-hidden="true"></div>
+
     <main class="login-container">
 
         <section class="login-card">
@@ -29,7 +32,7 @@
             </h1>
 
             <p class="login-descripcion">
-                Ingresa tus datos para acceder a la intranet escolar.
+                Ingresa tus datos para continuar con tu espacio académico.
             </p>
 
 
@@ -40,12 +43,16 @@
                         Usuario
                     </label>
 
-                    <input
-                        type="text"
-                        id="usuario"
-                        placeholder="Ingresa tu usuario"
-                        required
-                    >
+                    <div class="input-con-icono">
+                        <span class="input-icono" aria-hidden="true">👤</span>
+                        <input
+                            type="text"
+                            id="usuario"
+                            placeholder="Ingresa tu usuario"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
                 </div>
 
 
@@ -54,12 +61,16 @@
                         Contraseña
                     </label>
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Ingresa tu contraseña"
-                        required
-                    >
+                    <div class="input-con-icono">
+                        <span class="input-icono" aria-hidden="true">🔒</span>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Ingresa tu contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
                 </div>
 
 
@@ -78,7 +89,8 @@
 
 
                 <button type="submit" class="login-btn">
-                    Iniciar sesión
+                    <span>Iniciar sesión</span>
+                    <span aria-hidden="true">→</span>
                 </button>
 
             </form>
