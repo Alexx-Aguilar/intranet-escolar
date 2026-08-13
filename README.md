@@ -1,4 +1,3 @@
-> **Intranet escolar para conectar conocimiento, comunidad y futuro.**
 # ✨ AURALEXX
 
 > **Aprende. Crea. Evoluciona.**
