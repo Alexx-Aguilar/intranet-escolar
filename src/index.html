@@ -6,74 +6,91 @@
     <title>AURALEXX | Aprende. Crea. Evoluciona.</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="encabezado">
-        <a class="brand" href="#inicio" aria-label="AURALEXX, inicio"><span class="brand-mark" aria-hidden="true"><i></i><b>AX</b></span><span>AURALEXX</span></a>
-        <nav aria-label="Navegación principal">
-            <a class="activo" href="#inicio">Inicio</a><a href="#materias">Materias</a><a href="#horario">Horario</a><a href="#tareas">Tareas</a><a href="#progreso">Progreso</a><a href="#logros">Logros</a><a href="#perfil">Perfil</a>
+<body class="dashboard-body sidebar-body">
+    <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar" aria-label="Navegación principal">
+        <a class="brand sidebar-brand" href="#inicio" data-view-link="inicio" aria-label="AURALEXX, inicio"><span class="brand-mark" aria-hidden="true"><i></i><b>AX</b></span><span>AURALEXX</span></a>
+        <p class="sidebar-caption">TU ESPACIO</p>
+        <nav class="sidebar-nav">
+            <button class="sidebar-link active" data-view="inicio"><span>⌂</span>Inicio</button>
+            <button class="sidebar-link" data-view="materias"><span>▤</span>Materias</button>
+            <button class="sidebar-link" data-view="horario"><span>◷</span>Horario</button>
+            <button class="sidebar-link" data-view="tareas"><span>✎</span>Tareas</button>
+            <button class="sidebar-link" data-view="progreso"><span>↗</span>Progreso</button>
+            <button class="sidebar-link" data-view="logros"><span>★</span>Logros</button>
+            <button class="sidebar-link" data-view="retos"><span>◎</span>Retos</button>
+            <button class="sidebar-link" data-view="avisos"><span>●</span>Avisos <b>2</b></button>
+            <button class="sidebar-link" data-view="perfil"><span>◉</span>Perfil</button>
         </nav>
-        <button id="modoBtn" class="mode-button" aria-label="Activar modo oscuro" title="Cambiar modo de color"><span aria-hidden="true">☾</span></button>
-    </header>
+        <div class="sidebar-bottom">
+            <button id="modoBtn" class="sidebar-link mode-link" aria-label="Activar modo oscuro"><span aria-hidden="true">☾</span>Modo oscuro</button>
+            <a class="sidebar-link logout-link" href="login.html"><span aria-hidden="true">↗</span>Cerrar sesión</a>
+        </div>
+    </aside>
 
-    <main>
-        <section id="inicio" class="hero section-wrap">
-            <div class="hero-copy">
-                <p class="eyebrow">MI ESPACIO · JUEVES, 13 DE AGOSTO</p>
-                <h1>Hola, Alex.<br><span>Hoy puedes avanzar distinto.</span></h1>
-                <p class="hero-text">Tienes una entrega cerca, una racha que cuidar y mucho por crear. Haz que cuente.</p>
-                <button class="button button-primary explore-button"><span>Ver mis materias</span><span aria-hidden="true">↓</span></button>
+    <main class="workspace">
+        <section id="inicio" class="view-panel active" data-view-panel="inicio">
+            <header class="view-topbar"><div><p class="eyebrow">MI ESPACIO · JUEVES, 13 DE AGOSTO</p><h1>Hola, Alex. <span>Tu energía cuenta.</span></h1></div><div class="top-status"><i></i> Estudiante activo</div></header>
+            <div class="home-hero"><div><p>Organiza tu ritmo, protege tu racha y conviértelo en avance real.</p><button class="button button-primary" data-go-to="materias"><span>Ver mis materias</span><span>→</span></button></div><div class="home-level"><span>NIVEL</span><strong>08</strong><p>1,240 <b>XP</b></p><div class="xp-track"><i></i></div><small>260 XP para nivel 09</small></div></div>
+            <div class="home-summary">
+                <article class="next-class"><p class="eyebrow">PRÓXIMA CLASE</p><time>08:00</time><div><h3>Programación Web</h3><p>Laboratorio 2 · Daniel Soto</p></div><button data-go-to="horario" aria-label="Ver horario">→</button></article>
+                <article class="home-stat average-tile"><p>Promedio general</p><strong>92<span>/100</span></strong><small>+4 este período</small></article>
+                <article class="home-stat streak-card"><p>Racha actual</p><strong>07</strong><span>días de enfoque</span></article>
+                <article class="home-stat task-mini"><p>En tu radar</p><strong>03</strong><span>tareas pendientes</span></article>
             </div>
-            <aside class="hero-pulse" aria-label="Resumen de energía académica">
-                <p>Ritmo de la semana</p><strong>En movimiento</strong>
-                <div class="pulse-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <span><b></b> 3 tareas en foco</span>
-            </aside>
+            <div class="home-bottom">
+                <article class="home-challenge"><p class="eyebrow">RETO DESTACADO</p><h2>Completa la práctica de JavaScript.</h2><p>Una pequeña entrega para seguir sumando.</p><button class="challenge-button" data-go-to="retos">Ver reto <span>+50 XP</span></button></article>
+                <article class="home-performance"><p class="eyebrow">RENDIMIENTO</p><h2>Vas en una trayectoria <span>ascendente.</span></h2><div class="mini-performance"><i></i><i></i><i></i><i></i><i></i></div><button class="text-link" data-go-to="progreso">Ver mi progreso →</button></article>
+            </div>
         </section>
 
-        <section id="perfil" class="student-strip section-wrap">
-            <div class="student-main"><div class="avatar">AA</div><div><p class="eyebrow">ESTUDIANTE ACTIVO</p><h2>Alex Aguilar</h2><span>Programación Front End · Grupo 08</span></div></div>
-            <div class="student-data"><div><small>Nivel actual</small><strong>08</strong></div><div><small>Experiencia</small><strong>1,240 <em>XP</em></strong></div><div><small>Racha</small><strong class="streak">7 <em>días</em></strong></div></div>
-            <span class="status-dot">Conectado</span>
-        </section>
-
-        <section class="snapshot section-wrap" aria-label="Resumen académico">
-            <article class="average-tile"><p>Promedio general</p><div><strong>92</strong><span>/100</span></div><small>Subiste 4 puntos este período</small><div class="mini-line"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-            <article class="compact-stat mint"><span class="stat-icon">04</span><div><p>Materias activas</p><strong>Todo en marcha</strong></div></article>
-            <article class="compact-stat coral"><span class="stat-icon">03</span><div><p>Tareas pendientes</p><strong>1 es prioritaria</strong></div></article>
-            <article class="attendance-tile"><p>Asistencia</p><strong>98%</strong><span>Excelente constancia</span></article>
-        </section>
-
-        <section id="materias" class="section-wrap section-block">
-            <div class="section-heading"><div><p class="eyebrow">MI FORMACIÓN</p><h2>Materias que están tomando forma.</h2></div><a class="text-link" href="#horario">Ver horario completo <span>→</span></a></div>
-            <div class="subject-grid">
+        <section id="materias" class="view-panel" data-view-panel="materias">
+            <header class="view-topbar"><div><p class="eyebrow">MI FORMACIÓN</p><h1>Materias que toman <span>forma.</span></h1></div><span class="view-badge">04 activas</span></header>
+            <div class="subject-grid view-content">
                 <article class="subject-card subject-code"><div class="subject-top"><span class="subject-tag">PROGRAMACIÓN</span><span class="subject-symbol">&lt;/&gt;</span></div><h3>Programación Web</h3><p>Prof. Daniel Soto</p><div class="subject-progress"><span>78% completado</span><div><i style="width:78%"></i></div></div><footer>Próxima: Algoritmos y lógica <b>Hoy · 8:00</b></footer></article>
                 <article class="subject-card subject-design"><div class="subject-top"><span class="subject-tag">DISEÑO</span><span class="subject-symbol">✦</span></div><h3>Diseño Web</h3><p>Prof. Carla Mora</p><div class="subject-progress"><span>64% completado</span><div><i style="width:64%"></i></div></div><footer>Próxima: Sistema de color <b>Mañana · 9:00</b></footer></article>
                 <article class="subject-card subject-git"><div class="subject-top"><span class="subject-tag">HERRAMIENTAS</span><span class="subject-symbol">⌘</span></div><h3>Git y GitHub</h3><p>Prof. Sergio Vega</p><div class="subject-progress"><span>86% completado</span><div><i style="width:86%"></i></div></div><footer>Próxima: Pull requests <b>Vie · 10:00</b></footer></article>
-                <article class="project-card"><p class="eyebrow">PROYECTO INTEGRADOR</p><h3>Portafolio personal</h3><p>Tu espacio para unir lo que estás aprendiendo.</p><span class="project-date">Entrega en 8 días</span><a href="#tareas">Revisar entregables →</a></article>
+                <article class="project-card"><p class="eyebrow">PROYECTO INTEGRADOR</p><h3>Portafolio personal</h3><p>Tu espacio para unir lo que estás aprendiendo.</p><span class="project-date">Entrega en 8 días</span><button class="text-link" data-go-to="tareas">Revisar entregables →</button></article>
             </div>
         </section>
 
-        <section id="horario" class="section-wrap section-block schedule-layout">
-            <div><div class="section-heading"><div><p class="eyebrow">ORGANIZACIÓN</p><h2>Tu semana, sin ruido.</h2></div></div><div class="schedule-list"><article class="schedule-now"><time>08:00</time><div><span class="live-label">AHORA</span><h3>Programación Web</h3><p>Laboratorio 2 · Daniel Soto</p></div><button class="circle-button" aria-label="Ver clase de Programación Web">→</button></article><article><time>09:30</time><div><h3>Diseño Web</h3><p>Virtual · Carla Mora</p></div><span>EN 1 H 30</span></article><article><time>11:00</time><div><h3>Espacio de proyecto</h3><p>Trabajo autónomo</p></div><span>HOY</span></article></div></div>
-            <aside class="week-card"><div><p>Esta semana</p><strong>13 <small>— 17 AGO</small></strong></div><div class="week-days"><span><b>L</b><i></i></span><span><b>M</b><i></i></span><span><b>X</b><i></i></span><span class="today"><b>J</b><i></i></span><span><b>V</b><i></i></span></div><p class="week-note"><b>4 sesiones</b> planificadas<br>Tu ritmo va muy bien.</p></aside>
+        <section id="horario" class="view-panel" data-view-panel="horario">
+            <header class="view-topbar"><div><p class="eyebrow">ORGANIZACIÓN</p><h1>Tu semana, <span>sin ruido.</span></h1></div><span class="view-badge today-badge">HOY · JUEVES</span></header>
+            <div class="schedule-layout view-content"><div class="schedule-area"><div class="schedule-list"><article class="schedule-now"><time>08:00</time><div><span class="live-label">AHORA</span><h3>Programación Web</h3><p>Laboratorio 2 · Daniel Soto</p></div><button class="circle-button">→</button></article><article><time>09:30</time><div><h3>Diseño Web</h3><p>Virtual · Carla Mora</p></div><span>EN 1 H 30</span></article><article><time>11:00</time><div><h3>Espacio de proyecto</h3><p>Trabajo autónomo</p></div><span>HOY</span></article></div></div><aside class="week-card"><div><p>Esta semana</p><strong>13 <small>— 17 AGO</small></strong></div><div class="week-days"><span><b>L</b><i></i></span><span><b>M</b><i></i></span><span><b>X</b><i></i></span><span class="today"><b>J</b><i></i></span><span><b>V</b><i></i></span></div><p class="week-note"><b>4 sesiones</b> planificadas<br>Tu ritmo va muy bien.</p></aside></div>
         </section>
 
-        <section id="progreso" class="section-wrap section-block progress-layout">
-            <article class="progress-card"><p class="eyebrow">RENDIMIENTO ACADÉMICO</p><div class="progress-header"><div><h2>Un progreso que se nota.</h2><p>Tu evolución mantiene una tendencia positiva.</p></div><strong>92<small>%</small></strong></div><div class="growth-chart" aria-label="Evolución de rendimiento"><span>Jun</span><i style="height:42%"></i><span>Jul</span><i style="height:58%"></i><span>Ag</span><i class="current" style="height:83%"></i><span>Meta</span><i class="goal" style="height:92%"></i></div><footer><span>Estado académico</span><b>Excelente rendimiento</b></footer></article>
-            <article class="xp-card"><p class="eyebrow">CAMINO AL NIVEL 09</p><h3>Tu energía está creciendo.</h3><div class="xp-amount"><strong>1,240</strong><span>/ 1,500 XP</span></div><div class="xp-track"><i></i></div><p>Te faltan <b>260 XP</b> para desbloquear un nuevo nivel.</p><div class="challenge"><span>RETO DEL DÍA</span><strong>Completa la práctica de JavaScript</strong><button class="challenge-button" type="button">+50 XP</button></div></article>
+        <section id="tareas" class="view-panel" data-view-panel="tareas">
+            <header class="view-topbar"><div><p class="eyebrow">EN TU RADAR</p><h1>Tareas con <span>intención.</span></h1></div><span class="task-count">03 pendientes</span></header>
+            <div class="task-board view-content"><article class="task-priority"><div><span class="priority-label">PRIORIDAD ALTA</span><h3>Proyecto de programación</h3><p>Construye la lógica de validación para el formulario.</p></div><div class="task-meta"><span>Programación Web</span><strong>Entrega mañana</strong></div><button class="task-check" aria-label="Marcar proyecto de programación como completado">✓</button></article><article class="task-row"><span class="task-color coral-dot"></span><div><h3>Diseño de interfaz</h3><p>Diseño Web · Wireframe de la vista móvil</p></div><span class="task-date">LUN · 18 AGO</span><button class="task-check" aria-label="Marcar diseño de interfaz como completado">✓</button></article><article class="task-row"><span class="task-color mint-dot"></span><div><h3>Investigación académica</h3><p>Git y GitHub · Buenas prácticas de ramas</p></div><span class="task-date">MIÉ · 20 AGO</span><button class="task-check" aria-label="Marcar investigación académica como completada">✓</button></article></div>
         </section>
 
-        <section id="tareas" class="section-wrap section-block tasks-layout">
-            <div class="section-heading"><div><p class="eyebrow">EN TU RADAR</p><h2>Tareas que merecen tu atención.</h2></div><span class="task-count">03 pendientes</span></div>
-            <div class="task-board"><article class="task-priority"><div><span class="priority-label">PRIORIDAD ALTA</span><h3>Proyecto de programación</h3><p>Construye la lógica de validación para el formulario.</p></div><div class="task-meta"><span>Programación Web</span><strong>Entrega mañana</strong></div><button class="task-check" aria-label="Marcar proyecto de programación como completado">✓</button></article><article class="task-row"><span class="task-color coral-dot"></span><div><h3>Diseño de interfaz</h3><p>Diseño Web · Wireframe de la vista móvil</p></div><span class="task-date">LUN · 18 AGO</span><button class="task-check" aria-label="Marcar diseño de interfaz como completado">✓</button></article><article class="task-row"><span class="task-color mint-dot"></span><div><h3>Investigación académica</h3><p>Git y GitHub · Buenas prácticas de ramas</p></div><span class="task-date">MIÉ · 20 AGO</span><button class="task-check" aria-label="Marcar investigación académica como completada">✓</button></article></div>
+        <section id="progreso" class="view-panel" data-view-panel="progreso">
+            <header class="view-topbar"><div><p class="eyebrow">RENDIMIENTO ACADÉMICO</p><h1>Un progreso que <span>se nota.</span></h1></div><span class="view-badge">Promedio 92%</span></header>
+            <div class="progress-layout view-content"><article class="progress-card"><div class="progress-header"><div><h2>Evolución académica</h2><p>Tu tendencia mantiene un ritmo positivo.</p></div><strong>92<small>%</small></strong></div><div class="growth-chart"><span>Jun</span><i style="height:42%"></i><span>Jul</span><i style="height:58%"></i><span>Ag</span><i class="current" style="height:83%"></i><span>Meta</span><i class="goal" style="height:92%"></i></div><footer><span>Estado académico</span><b>Excelente rendimiento</b></footer></article><article class="xp-card"><p class="eyebrow">CAMINO AL NIVEL 09</p><h3>Tu energía está creciendo.</h3><div class="xp-amount"><strong id="xpActual">1,240</strong><span>/ 1,500 XP</span></div><div class="xp-track"><i id="xpBar"></i></div><p id="xpMensaje">Te faltan <b>260 XP</b> para desbloquear un nuevo nivel.</p><div class="level-details"><span><b>08</b>Nivel</span><span><b class="streak">07</b> días de racha</span></div></article></div>
         </section>
 
-        <section id="logros" class="section-wrap section-block bottom-grid">
-            <article class="achievements"><div class="section-heading"><div><p class="eyebrow">TU COLECCIÓN</p><h2>Logros que ya son tuyos.</h2></div><a href="#logros" class="text-link">Ver todos →</a></div><div class="achievement-row"><div class="achievement unlocked"><span>01</span><div><h3>Primera entrega</h3><p>Desbloqueado</p></div></div><div class="achievement unlocked fire"><span>07</span><div><h3>Ritmo constante</h3><p>7 días seguidos</p></div></div><div class="achievement locked"><span>★</span><div><h3>Alto rendimiento</h3><p>En progreso · 92%</p></div></div></div></article>
-            <aside id="avisos" class="notices"><p class="eyebrow">AVISOS</p><article><span class="notice-dot"></span><div><small>NUEVA ACTIVIDAD</small><h3>La práctica de JavaScript ya está disponible.</h3><p>Hace 30 min</p></div></article><article><span class="notice-dot blue"></span><div><small>PRÓXIMA EVALUACIÓN</small><h3>Diseño Web · 22 de agosto</h3><p>Revisa la guía de estudio</p></div></article></aside>
+        <section id="logros" class="view-panel" data-view-panel="logros">
+            <header class="view-topbar"><div><p class="eyebrow">TU COLECCIÓN</p><h1>Logros que ya son <span>tuyos.</span></h1></div><span class="view-badge">02 desbloqueados</span></header>
+            <div class="achievement-gallery view-content"><article class="achievement unlocked"><span>01</span><div><h3>Primera entrega</h3><p>Completaste tu primera tarea del período.</p><b>DESBLOQUEADO</b></div></article><article class="achievement unlocked fire"><span>07</span><div><h3>Ritmo constante</h3><p>Mantienes 7 días seguidos de enfoque.</p><b>DESBLOQUEADO</b></div></article><article class="achievement locked"><span>★</span><div><h3>Alto rendimiento</h3><p>Alcanza un promedio general de 95%.</p><b>EN PROGRESO · 92%</b></div></article><article class="achievement locked"><span>∞</span><div><h3>Explorador</h3><p>Completa todos los retos de la semana.</p><b>0 / 4 RETOS</b></div></article></div>
+        </section>
+
+        <section id="retos" class="view-panel" data-view-panel="retos">
+            <header class="view-topbar"><div><p class="eyebrow">ENERGÍA EN ACCIÓN</p><h1>Retos para <span>subir de nivel.</span></h1></div><span class="view-badge neon-badge">+50 XP disponible</span></header>
+            <div class="challenges-grid view-content"><article class="daily-challenge"><p class="eyebrow">RETO DEL DÍA</p><span class="challenge-orb">◎</span><h2>Completa la práctica de JavaScript</h2><p>Resuelve los ejercicios de eventos y validación del módulo actual.</p><div><span>RECOMPENSA</span><strong>+50 XP</strong></div><button class="button button-primary challenge-button" type="button">Activar reto <span>→</span></button></article><div class="weekly-challenges"><p class="eyebrow">RETOS SEMANALES</p><article><span>01</span><div><h3>Ordena tus entregas</h3><p>Completa 3 tareas antes de su fecha.</p></div><b>+100 XP</b></article><article><span>02</span><div><h3>Comparte tu avance</h3><p>Actualiza tu portafolio personal.</p></div><b>+75 XP</b></article><article><span>03</span><div><h3>Racha imparable</h3><p>Mantén 10 días consecutivos.</p></div><b>+150 XP</b></article></div></div>
+        </section>
+
+        <section id="avisos" class="view-panel" data-view-panel="avisos">
+            <header class="view-topbar"><div><p class="eyebrow">ACTUALIZACIONES</p><h1>Lo que necesitas <span>saber.</span></h1></div><span class="view-badge">02 nuevos</span></header>
+            <div class="notices-full view-content"><article><span class="notice-dot"></span><div><small>NUEVA ACTIVIDAD · HACE 30 MIN</small><h3>La práctica de JavaScript ya está disponible.</h3><p>Completa los ejercicios de eventos y validación antes del viernes.</p></div></article><article><span class="notice-dot blue"></span><div><small>PRÓXIMA EVALUACIÓN · 22 AGO</small><h3>Diseño Web: repasa la guía de estudio.</h3><p>La evaluación incluirá sistema de color y jerarquía visual.</p></div></article><article><span class="notice-dot lime"></span><div><small>ACTUALIZACIÓN ACADÉMICA</small><h3>Tu asistencia sigue en nivel excelente: 98%.</h3><p>Tu constancia te acerca a un logro especial.</p></div></article></div>
+        </section>
+
+        <section id="perfil" class="view-panel" data-view-panel="perfil">
+            <header class="view-topbar"><div><p class="eyebrow">MI PERFIL</p><h1>Este avance tiene <span>tu nombre.</span></h1></div><button class="text-link">Editar información →</button></header>
+            <div class="profile-layout view-content"><article class="profile-card"><div class="profile-avatar">AA</div><p class="eyebrow">ESTUDIANTE ACTIVO</p><h2>Alex Aguilar</h2><p>Programación Front End · Grupo 08</p><span class="status-dot">Conectado</span></article><div class="profile-info"><article><small>Nivel actual</small><strong>08</strong><span>En crecimiento</span></article><article><small>Experiencia</small><strong>1,240 <em>XP</em></strong><span>Meta: 1,500 XP</span></article><article><small>Racha</small><strong class="streak">07 <em>días</em></strong><span>Tu mejor racha: 12</span></article><article><small>Asistencia</small><strong>98%</strong><span>Excelente registro</span></article><div class="student-details"><p><b>Programa</b> Programación Front End</p><p><b>Correo</b> alex.aguilar@auralexx.edu</p><p><b>Estado</b> Estudiante activo</p></div></div></div>
         </section>
     </main>
-    <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><i></i><b>AX</b></span><span>AURALEXX</span></a><p>Aprende. Crea. Evoluciona.</p><span>© 2026 · Plataforma estudiantil</span></footer>
+    <p id="feedbackXp" class="xp-feedback" role="status" aria-live="polite"></p>
     <script src="js/app.js"></script>
 </body>
 </html>

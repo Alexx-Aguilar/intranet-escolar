@@ -1,52 +1,78 @@
 # 🎓 NEXUS EDU
 
 > **Intranet escolar para conectar conocimiento, comunidad y futuro.**
+# ✨ AURALEXX
 
-NEXUS EDU es un sistema de gestión interna diseñado para una institución educativa pública.
+> **Aprende. Crea. Evoluciona.**
 
-La plataforma permite centralizar información académica, comunicados, asistencia, horarios y recursos en un solo lugar.
+AURALEXX es una plataforma estudiantil diseñada para ofrecer una experiencia académica más organizada, dinámica e interactiva.
 
----
-
-## 📚 Descripción del proyecto
-
-NEXUS EDU conecta a los diferentes miembros de la comunidad educativa mediante una plataforma sencilla, moderna y accesible.
-
-El sistema contempla diferentes perfiles de usuario:
-
-- 👨‍💼 Administración
-- 👩‍🏫 Docentes
-- 🎓 Estudiantes
-- 👨‍👩‍👧 Familias
-
-Cada usuario tendrá acceso únicamente a las funciones correspondientes a su rol.
+La plataforma reúne en un solo espacio información como materias, horarios, tareas, rendimiento académico, retos, logros y progreso del estudiante.
 
 ---
 
-## ✨ Funcionalidades principales
+## 🎓 ¿Qué es AURALEXX?
 
-- 🔐 Autenticación por roles.
-- 👥 Gestión de usuarios.
-- 📝 Registro de calificaciones.
-- ✅ Control de asistencia.
-- 📢 Publicación de comunicados.
-- 📅 Calendario académico.
-- 🕐 Consulta de horarios.
-- 📁 Consulta de materiales y tareas.
-- 🏫 Reserva de aulas y recursos.
-- 🌙 Modo oscuro.
-- 📱 Diseño adaptable a diferentes dispositivos.
+AURALEXX nace como una propuesta de plataforma educativa enfocada en los estudiantes.
+
+Su objetivo es transformar la forma en que los estudiantes consultan y organizan su información académica, utilizando una interfaz moderna, colorida y dinámica.
+
+La plataforma busca que consultar las actividades escolares no sea solamente funcional, sino también una experiencia agradable y motivadora.
 
 ---
 
-## 👤 Roles del sistema
+## ✨ Características
 
-| Rol | Funciones principales |
-|---|---|
-| Administración | Usuarios, comunicados y recursos |
-| Docente | Calificaciones, asistencia y materiales |
-| Estudiante | Notas, horarios y tareas |
-| Familia | Consulta de información académica |
+- 🔐 Inicio de sesión
+- 🏠 Dashboard estudiantil
+- 📚 Materias
+- 📅 Horario
+- 📝 Tareas
+- 📊 Rendimiento académico
+- 📈 Progreso
+- ⭐ Sistema de XP
+- 🔥 Racha de estudio
+- 🏆 Logros
+- 🎯 Retos
+- 🔔 Avisos
+- 👤 Perfil del estudiante
+- 🌙 Modo oscuro
+- 📱 Diseño responsive
+- ⚡ Animaciones e interacciones
+- 🌈 Identidad visual neón
+
+---
+
+## 🎮 Gamificación
+
+AURALEXX incorpora elementos de gamificación para hacer más dinámica la experiencia del estudiante.
+
+El sistema incluye:
+
+- ⭐ XP
+- 🔥 Rachas
+- 🏆 Logros
+- 🎯 Retos
+- 📈 Niveles
+- ✅ Progreso de tareas
+
+Completar determinadas actividades puede generar recompensas visuales y aumentar el progreso del estudiante.
+
+---
+
+## 🎨 Diseño
+
+La identidad visual de AURALEXX utiliza una combinación de colores vivos y efectos neón.
+
+La interfaz busca mantener un equilibrio entre:
+
+- 🌈 Color
+- ⚡ Energía
+- 📚 Educación
+- 🎮 Interactividad
+- ✨ Creatividad
+
+El diseño también cuenta con modo oscuro y adaptación para diferentes tamaños de pantalla.
 
 ---
 
@@ -55,16 +81,18 @@ Cada usuario tendrá acceso únicamente a las funciones correspondientes a su ro
 - HTML5
 - CSS3
 - JavaScript
-- Markdown
 - Git
 - GitHub
+- Visual Studio Code
+
+No se utilizan frameworks externos.
 
 ---
 
 ## 📁 Estructura del proyecto
 
 ```text
-intranet-escolar/
+AURALEXX/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
@@ -74,6 +102,9 @@ intranet-escolar/
 │   └── requerimientos.md
 └── src/
     ├── index.html
+    ├── login.html
     ├── css/
+    │   └── style.css
     ├── js/
+    │   └── app.js
     └── assets/
