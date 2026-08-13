@@ -3,285 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Intranet Escolar</title>
-
+    <title>AURALEXX | Aprende. Crea. Evoluciona.</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <header class="encabezado">
-        <div class="logo">
-            🏫 INTRANET
-        </div>
-
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#materias">Materias</a>
-            <a href="#horario">Horario</a>
-            <a href="#rendimiento">Rendimiento</a>
-            <a href="#tareas">Tareas</a>
-            <a href="#avisos">Avisos</a>
+        <a class="brand" href="#inicio" aria-label="AURALEXX, inicio"><span class="brand-mark" aria-hidden="true"><i></i><b>AX</b></span><span>AURALEXX</span></a>
+        <nav aria-label="Navegación principal">
+            <a class="activo" href="#inicio">Inicio</a><a href="#materias">Materias</a><a href="#horario">Horario</a><a href="#tareas">Tareas</a><a href="#progreso">Progreso</a><a href="#logros">Logros</a><a href="#perfil">Perfil</a>
         </nav>
-
-        <button id="modoBtn" class="modo-btn" aria-label="Cambiar modo de color">🌙</button>
+        <button id="modoBtn" class="mode-button" aria-label="Activar modo oscuro" title="Cambiar modo de color"><span aria-hidden="true">☾</span></button>
     </header>
 
     <main>
+        <section id="inicio" class="hero section-wrap">
+            <div class="hero-copy">
+                <p class="eyebrow">MI ESPACIO · JUEVES, 13 DE AGOSTO</p>
+                <h1>Hola, Alex.<br><span>Hoy puedes avanzar distinto.</span></h1>
+                <p class="hero-text">Tienes una entrega cerca, una racha que cuidar y mucho por crear. Haz que cuente.</p>
+                <button class="button button-primary explore-button"><span>Ver mis materias</span><span aria-hidden="true">↓</span></button>
+            </div>
+            <aside class="hero-pulse" aria-label="Resumen de energía académica">
+                <p>Ritmo de la semana</p><strong>En movimiento</strong>
+                <div class="pulse-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <span><b></b> 3 tareas en foco</span>
+            </aside>
+        </section>
 
-        <section id="inicio" class="bienvenida">
-            <div>
-                <p class="etiqueta">PORTAL ESTUDIANTIL</p>
+        <section id="perfil" class="student-strip section-wrap">
+            <div class="student-main"><div class="avatar">AA</div><div><p class="eyebrow">ESTUDIANTE ACTIVO</p><h2>Alex Aguilar</h2><span>Programación Front End · Grupo 08</span></div></div>
+            <div class="student-data"><div><small>Nivel actual</small><strong>08</strong></div><div><small>Experiencia</small><strong>1,240 <em>XP</em></strong></div><div><small>Racha</small><strong class="streak">7 <em>días</em></strong></div></div>
+            <span class="status-dot">Conectado</span>
+        </section>
 
-                <h1>Bienvenido a tu<br>
-                    <span>Intranet Escolar</span>
-                </h1>
+        <section class="snapshot section-wrap" aria-label="Resumen académico">
+            <article class="average-tile"><p>Promedio general</p><div><strong>92</strong><span>/100</span></div><small>Subiste 4 puntos este período</small><div class="mini-line"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="compact-stat mint"><span class="stat-icon">04</span><div><p>Materias activas</p><strong>Todo en marcha</strong></div></article>
+            <article class="compact-stat coral"><span class="stat-icon">03</span><div><p>Tareas pendientes</p><strong>1 es prioritaria</strong></div></article>
+            <article class="attendance-tile"><p>Asistencia</p><strong>98%</strong><span>Excelente constancia</span></article>
+        </section>
 
-                <p>
-                    Todo lo que necesitas para organizar tus clases,
-                    consultar tus materias y mantenerte al día.
-                </p>
-
-                <button>Explorar portal</button>
+        <section id="materias" class="section-wrap section-block">
+            <div class="section-heading"><div><p class="eyebrow">MI FORMACIÓN</p><h2>Materias que están tomando forma.</h2></div><a class="text-link" href="#horario">Ver horario completo <span>→</span></a></div>
+            <div class="subject-grid">
+                <article class="subject-card subject-code"><div class="subject-top"><span class="subject-tag">PROGRAMACIÓN</span><span class="subject-symbol">&lt;/&gt;</span></div><h3>Programación Web</h3><p>Prof. Daniel Soto</p><div class="subject-progress"><span>78% completado</span><div><i style="width:78%"></i></div></div><footer>Próxima: Algoritmos y lógica <b>Hoy · 8:00</b></footer></article>
+                <article class="subject-card subject-design"><div class="subject-top"><span class="subject-tag">DISEÑO</span><span class="subject-symbol">✦</span></div><h3>Diseño Web</h3><p>Prof. Carla Mora</p><div class="subject-progress"><span>64% completado</span><div><i style="width:64%"></i></div></div><footer>Próxima: Sistema de color <b>Mañana · 9:00</b></footer></article>
+                <article class="subject-card subject-git"><div class="subject-top"><span class="subject-tag">HERRAMIENTAS</span><span class="subject-symbol">⌘</span></div><h3>Git y GitHub</h3><p>Prof. Sergio Vega</p><div class="subject-progress"><span>86% completado</span><div><i style="width:86%"></i></div></div><footer>Próxima: Pull requests <b>Vie · 10:00</b></footer></article>
+                <article class="project-card"><p class="eyebrow">PROYECTO INTEGRADOR</p><h3>Portafolio personal</h3><p>Tu espacio para unir lo que estás aprendiendo.</p><span class="project-date">Entrega en 8 días</span><a href="#tareas">Revisar entregables →</a></article>
             </div>
         </section>
 
-
-        <section class="perfil">
-            <div class="perfil-info">
-                <div class="avatar">👨‍🎓</div>
-
-                <div>
-                    <p>ESTUDIANTE</p>
-                    <h2>Alex Aguilar</h2>
-                    <span>Programación Front End</span>
-                </div>
-            </div>
-
-            <div class="estado">
-                <span class="punto"></span>
-                Estudiante activo
-            </div>
+        <section id="horario" class="section-wrap section-block schedule-layout">
+            <div><div class="section-heading"><div><p class="eyebrow">ORGANIZACIÓN</p><h2>Tu semana, sin ruido.</h2></div></div><div class="schedule-list"><article class="schedule-now"><time>08:00</time><div><span class="live-label">AHORA</span><h3>Programación Web</h3><p>Laboratorio 2 · Daniel Soto</p></div><button class="circle-button" aria-label="Ver clase de Programación Web">→</button></article><article><time>09:30</time><div><h3>Diseño Web</h3><p>Virtual · Carla Mora</p></div><span>EN 1 H 30</span></article><article><time>11:00</time><div><h3>Espacio de proyecto</h3><p>Trabajo autónomo</p></div><span>HOY</span></article></div></div>
+            <aside class="week-card"><div><p>Esta semana</p><strong>13 <small>— 17 AGO</small></strong></div><div class="week-days"><span><b>L</b><i></i></span><span><b>M</b><i></i></span><span><b>X</b><i></i></span><span class="today"><b>J</b><i></i></span><span><b>V</b><i></i></span></div><p class="week-note"><b>4 sesiones</b> planificadas<br>Tu ritmo va muy bien.</p></aside>
         </section>
 
-        <section class="estadisticas seccion" aria-label="Estadísticas rápidas">
-            <article class="estadistica-card estadistica-destacada">
-                <div class="estadistica-icono">📈</div>
-                <div>
-                    <p>Promedio general</p>
-                    <strong>92%</strong>
-                    <small>+4% este período</small>
-                </div>
-            </article>
-
-            <article class="estadistica-card">
-                <div class="estadistica-icono">📚</div>
-                <div>
-                    <p>Materias activas</p>
-                    <strong>3</strong>
-                    <small>En progreso</small>
-                </div>
-            </article>
-
-            <article class="estadistica-card">
-                <div class="estadistica-icono">✓</div>
-                <div>
-                    <p>Tareas pendientes</p>
-                    <strong>3</strong>
-                    <small>Por completar</small>
-                </div>
-            </article>
-
-            <article class="estadistica-card">
-                <div class="estadistica-icono">◎</div>
-                <div>
-                    <p>Asistencia</p>
-                    <strong>98%</strong>
-                    <small>Excelente registro</small>
-                </div>
-            </article>
+        <section id="progreso" class="section-wrap section-block progress-layout">
+            <article class="progress-card"><p class="eyebrow">RENDIMIENTO ACADÉMICO</p><div class="progress-header"><div><h2>Un progreso que se nota.</h2><p>Tu evolución mantiene una tendencia positiva.</p></div><strong>92<small>%</small></strong></div><div class="growth-chart" aria-label="Evolución de rendimiento"><span>Jun</span><i style="height:42%"></i><span>Jul</span><i style="height:58%"></i><span>Ag</span><i class="current" style="height:83%"></i><span>Meta</span><i class="goal" style="height:92%"></i></div><footer><span>Estado académico</span><b>Excelente rendimiento</b></footer></article>
+            <article class="xp-card"><p class="eyebrow">CAMINO AL NIVEL 09</p><h3>Tu energía está creciendo.</h3><div class="xp-amount"><strong>1,240</strong><span>/ 1,500 XP</span></div><div class="xp-track"><i></i></div><p>Te faltan <b>260 XP</b> para desbloquear un nuevo nivel.</p><div class="challenge"><span>RETO DEL DÍA</span><strong>Completa la práctica de JavaScript</strong><button class="challenge-button" type="button">+50 XP</button></div></article>
         </section>
 
-
-        <section id="materias" class="seccion">
-
-            <div class="titulo-seccion">
-                <p>MI FORMACIÓN</p>
-                <h2>Materias actuales</h2>
-            </div>
-
-            <div class="tarjetas">
-
-                <article class="tarjeta">
-                    <div class="icono">💻</div>
-                    <h3>Programación</h3>
-                    <p>Desarrollo de aplicaciones web y programación.</p>
-                    <span>En progreso</span>
-                </article>
-
-                <article class="tarjeta">
-                    <div class="icono">🎨</div>
-                    <h3>Diseño Web</h3>
-                    <p>Diseño, estructura y experiencia de usuario.</p>
-                    <span>En progreso</span>
-                </article>
-
-                <article class="tarjeta">
-                    <div class="icono">⚙️</div>
-                    <h3>Git y GitHub</h3>
-                    <p>Control de versiones y trabajo colaborativo.</p>
-                    <span>En progreso</span>
-                </article>
-
-            </div>
-
+        <section id="tareas" class="section-wrap section-block tasks-layout">
+            <div class="section-heading"><div><p class="eyebrow">EN TU RADAR</p><h2>Tareas que merecen tu atención.</h2></div><span class="task-count">03 pendientes</span></div>
+            <div class="task-board"><article class="task-priority"><div><span class="priority-label">PRIORIDAD ALTA</span><h3>Proyecto de programación</h3><p>Construye la lógica de validación para el formulario.</p></div><div class="task-meta"><span>Programación Web</span><strong>Entrega mañana</strong></div><button class="task-check" aria-label="Marcar proyecto de programación como completado">✓</button></article><article class="task-row"><span class="task-color coral-dot"></span><div><h3>Diseño de interfaz</h3><p>Diseño Web · Wireframe de la vista móvil</p></div><span class="task-date">LUN · 18 AGO</span><button class="task-check" aria-label="Marcar diseño de interfaz como completado">✓</button></article><article class="task-row"><span class="task-color mint-dot"></span><div><h3>Investigación académica</h3><p>Git y GitHub · Buenas prácticas de ramas</p></div><span class="task-date">MIÉ · 20 AGO</span><button class="task-check" aria-label="Marcar investigación académica como completada">✓</button></article></div>
         </section>
 
-<section id="rendimiento" class="seccion">
-
-    <div class="titulo-seccion">
-        <p>RENDIMIENTO ACADÉMICO</p>
-        <h2>Mi progreso</h2>
-    </div>
-
-    <div class="panel-academico">
-
-        <div class="progreso-card">
-            <div class="progreso-arriba">
-                <div>
-                    <p>Promedio general</p>
-                    <h3>92%</h3>
-                </div>
-
-                <div class="progreso-icono">
-                    📊
-                </div>
-            </div>
-
-            <div class="barra">
-                <div class="barra-progreso"></div>
-            </div>
-
-            <span>Excelente rendimiento</span>
-        </div>
-
-
-        <div id="tareas" class="tareas-card">
-
-            <div class="tareas-titulo">
-                <div>
-                    <p>TAREAS</p>
-                    <h3>Pendientes</h3>
-                </div>
-
-                <span class="contador">3</span>
-            </div>
-
-            <div class="tarea">
-                <span>💻</span>
-                <div>
-                    <strong>Proyecto de programación</strong>
-                    <small>Entrega: viernes</small>
-                </div>
-            </div>
-
-            <div class="tarea">
-                <span>🎨</span>
-                <div>
-                    <strong>Diseño de interfaz</strong>
-                    <small>Entrega: lunes</small>
-                </div>
-            </div>
-
-            <div class="tarea">
-                <span>📚</span>
-                <div>
-                    <strong>Investigación académica</strong>
-                    <small>Entrega: miércoles</small>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <section id="horario" class="seccion">
-
-            <div class="titulo-seccion">
-                <p>ORGANIZACIÓN</p>
-                <h2>Mi horario</h2>
-            </div>
-
-            <div class="horario">
-
-                <div class="dia">
-                    <strong>LUN</strong>
-                    <span>Programación</span>
-                    <small>8:00 AM</small>
-                </div>
-
-                <div class="dia">
-                    <strong>MAR</strong>
-                    <span>Diseño Web</span>
-                    <small>9:00 AM</small>
-                </div>
-
-                <div class="dia">
-                    <strong>MIÉ</strong>
-                    <span>Git y GitHub</span>
-                    <small>10:00 AM</small>
-                </div>
-
-                <div class="dia">
-                    <strong>JUE</strong>
-                    <span>Programación</span>
-                    <small>8:00 AM</small>
-                </div>
-
-                <div class="dia">
-                    <strong>VIE</strong>
-                    <span>Proyecto</span>
-                    <small>9:00 AM</small>
-                </div>
-
-            </div>
-
+        <section id="logros" class="section-wrap section-block bottom-grid">
+            <article class="achievements"><div class="section-heading"><div><p class="eyebrow">TU COLECCIÓN</p><h2>Logros que ya son tuyos.</h2></div><a href="#logros" class="text-link">Ver todos →</a></div><div class="achievement-row"><div class="achievement unlocked"><span>01</span><div><h3>Primera entrega</h3><p>Desbloqueado</p></div></div><div class="achievement unlocked fire"><span>07</span><div><h3>Ritmo constante</h3><p>7 días seguidos</p></div></div><div class="achievement locked"><span>★</span><div><h3>Alto rendimiento</h3><p>En progreso · 92%</p></div></div></div></article>
+            <aside id="avisos" class="notices"><p class="eyebrow">AVISOS</p><article><span class="notice-dot"></span><div><small>NUEVA ACTIVIDAD</small><h3>La práctica de JavaScript ya está disponible.</h3><p>Hace 30 min</p></div></article><article><span class="notice-dot blue"></span><div><small>PRÓXIMA EVALUACIÓN</small><h3>Diseño Web · 22 de agosto</h3><p>Revisa la guía de estudio</p></div></article></aside>
         </section>
-
-
-        <section id="avisos" class="seccion avisos">
-
-            <div class="titulo-seccion">
-                <p>IMPORTANTE</p>
-                <h2>Últimos avisos</h2>
-            </div>
-
-            <div class="aviso">
-                <div class="aviso-icono">📢</div>
-
-                <div>
-                    <h3>Entrega de proyecto</h3>
-                    <p>
-                        Recuerda revisar las actividades pendientes
-                        antes de la fecha de entrega.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
     </main>
-
-
-    <footer>
-        <p>© 2026 Intranet Escolar</p>
-        <p>Portal académico estudiantil</p>
-    </footer>
-
+    <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><i></i><b>AX</b></span><span>AURALEXX</span></a><p>Aprende. Crea. Evoluciona.</p><span>© 2026 · Plataforma estudiantil</span></footer>
     <script src="js/app.js"></script>
-
 </body>
 </html>
