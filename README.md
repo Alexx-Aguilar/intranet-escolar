@@ -1,5 +1,3 @@
-# 🎓 NEXUS EDU
-
 > **Intranet escolar para conectar conocimiento, comunidad y futuro.**
 # ✨ AURALEXX
 
